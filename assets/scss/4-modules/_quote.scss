@@ -1,0 +1,33 @@
+blockquote.quote {
+
+    quotes: "“" "”" "‘" "’";
+    
+    h4 {
+        text-transform: initial;
+        margin-bottom:1.5rem;
+        font-style:italic;
+        font-size:1.7rem;
+    }
+    h5 {
+        text-transform: initial;
+    }
+
+    img {
+        max-width:100px;
+        margin:auto
+    }
+
+    padding:6rem;
+    text-align: center;
+    &:before {
+        content: open-quote;
+        color: $colour-vibrant-green;
+        font-size:20px;
+        font-size: 100px;
+        margin: auto;
+        line-height: 20px;
+        font-family: nunito_sans_bold;
+    }
+}
+
+

@@ -1,0 +1,10 @@
+
+.container {
+    margin:auto !important;
+}
+
+@media (min-width: 2000px) {
+    .container {
+        max-width: 2000px !important;
+    }
+}

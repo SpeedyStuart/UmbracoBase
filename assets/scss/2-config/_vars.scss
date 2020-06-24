@@ -1,0 +1,98 @@
+
+
+/* $. Breakpoints
+\*----------------------------------------------------------------*/
+$mob-s: 320px;
+$mob-m: 375px;
+$mob-l: 425px;
+
+$mob: max-width 600px;
+$tab: 600px;
+$lap: 900px;
+$desk: 1100px;
+$lap-m: 1024px;
+$lap-l: 1440px;
+$desk-w: 1450px;
+$desk-xw: 1700px;
+
+
+
+/* $. Spacing
+\*----------------------------------------------------------------*/
+
+
+$padding--xxxl: 100px;
+$padding--xxl: 80px;
+$padding--xl: 60px;
+$padding--l: 40px;
+$padding--m: 30px;
+$padding--s: 20px;
+$padding--xs: 15px;
+$padding--xxs: 10px;
+
+
+
+/* $. Grid gutter values
+\*----------------------------------------------------------------*/
+
+$gutter-s: $padding--s;
+$gutter-l: $padding--m;
+
+
+
+/* $. Colours
+\*----------------------------------------------------------------*/
+
+/* Primary brand colours */
+$colour-vibrant-green: #1DD490;
+$green: $colour-vibrant-green;
+$colour-navy: #141B33;
+$colour-charcoal: #222222;
+
+/* UI shades */
+$colour-grey: #333333;
+$colour-mid-grey: #575757;
+$colour-pale-grey: #dedede;
+$colour-ghost-grey: #eeedee;
+
+/* night and day */
+$black: #000;
+$white: #fff;
+
+
+
+/* $. Fonts
+\*----------------------------------------------------------------*/
+
+$base-font-size:          16px;
+$base-line-height:        24px;
+
+$font-serif: Serif;
+$font-sans: hk_grotesk;
+
+
+
+/* $. Transition
+\*----------------------------------------------------------------*/
+
+$transition-duration: .25s;
+$transition-duration--fast: .15s;
+$transition-duration--slow: .35s;
+$transition-duration--slower: .6s;
+$transition-easing: ease-in-out;
+$transition-cubic-bezier: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+
+
+/* $. Border-radius
+\*----------------------------------------------------------------*/
+
+$global-radius: 6px;
+
+
+
+/* $. Box-shadow
+\*----------------------------------------------------------------*/
+
+$global-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.18);
+$global-box-shadow-hidden: 0px 3px 6px 0px rgba(0,0,0,0);

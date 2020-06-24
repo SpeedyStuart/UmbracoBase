@@ -1,0 +1,158 @@
+
+.aspect-ratio-container {
+    position: relative;
+}
+
+.aspect-ratio-container > .aspect-ratio-content {
+    position: absolute;
+
+    @include breakpoint($mob) {
+        position: relative;
+    }
+
+    width: 100% !important;
+    height: auto !important;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    iframe {
+        width: 150%;
+        height: 100%;
+        position: absolute;
+        left: -27%;
+
+        @include breakpoint($mob) {
+            position: relative;
+            left: -50px;
+            width: 200%;
+        }
+    }
+}
+
+.aspect-ratio-container.is-16x9:before {
+    padding-top: 56.25%;
+}
+
+.aspect-ratio-container:before {
+    display: block;
+    content: "";
+    width: 100%;
+}
+
+.video {
+    height: 100%;
+}
+
+.hp-video-caption {
+    position: absolute;
+    top: 44%;
+    left: 0;
+    width:100%;
+    text-align:center;
+    color: #fff;
+    padding: 10px;
+
+    h3 {
+        color: $white;
+        font-size: 33px;
+        text-shadow: -1px 1px 2px $colour-grey;
+        font-weight: bold;
+        text-transform: uppercase;
+        @include breakpoint($desk-xw) {
+            font-size: 40px;
+        }
+    }
+}
+
+.hp-video {
+    position: relative;
+    padding-bottom: 56.25%; //55%; /* 16:9 */
+    padding-top: 19px;
+
+    @include breakpoint($desk-w) {
+        padding-top: 14px
+    }
+
+    @include breakpoint($desk-xw) {
+        padding-top: 10px
+    }
+
+    height: 0;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    /*@include breakpoint($mob-s) {
+        padding: 0 !important;
+        margin: 0 !important;
+        //height: 183px; //small phone
+        height: 177px;
+    }
+
+    @include breakpoint($mob-m) {
+        height: 206px;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    @include breakpoint($mob-l) {
+        height: 234px;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    @include breakpoint($tab) {
+        height: 427px;
+        padding: 0 !important;
+        margin: 0 !important;
+        //padding-left: 15px !important;
+        //padding-right: 15px !important;
+    }
+
+    @include breakpoint($lap-m) {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    //$lap-l: 1440px;
+    @include breakpoint($lap) {
+        height: 327px;
+    }
+
+    @include breakpoint($desk) {
+        min-height: 449px;
+    }
+
+    @include breakpoint($desk-w) {
+        min-height: 462px;
+    }
+
+    @include breakpoint($desk-xw) {
+        height: 797px;
+        margin-top: -15px !important;
+    }*/
+}
+
+/*
+.hp-video {
+    position: relative;
+    padding-bottom: 56.25%; // 16:9 
+    padding-top: 25px;
+    height: 0;
+}
+
+.hp-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+*/

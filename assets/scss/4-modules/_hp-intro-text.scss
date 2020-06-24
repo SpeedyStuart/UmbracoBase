@@ -1,0 +1,44 @@
+//for homepage
+.intro-text {
+
+    
+    background-size: cover;
+    background-position: center center;
+
+
+
+    //for floating logo
+    position: relative;
+
+    background-color: $colour-navy;
+    flex: 1;
+
+    div {
+        padding:1rem;
+        padding-top:0;
+    }
+
+    h1 {
+        padding:1rem 3rem;
+
+
+        &.sub-page {
+            color:$white;
+            text-align: center;
+        }
+    }
+
+    p {
+        color:$colour-pale-grey;
+        padding:1rem 3rem;
+    }
+
+    .button {
+        margin-left:3rem;
+        margin-bottom: 2rem;
+    }
+
+    @include breakpoint($mob) {
+       
+    }
+}

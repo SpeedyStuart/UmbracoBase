@@ -1,0 +1,136 @@
+/**
+ * Title:
+ *    Typography
+ * Sections:
+ *    $. Base
+ *    $. Heading sizes
+ *    $. Body sizes
+ *    $. Text modifiers
+ */
+
+
+
+ /* $. Base
+\*----------------------------------------------------------------*/
+
+%heading-semi {
+	font-family: $font-sans;
+	font-weight: 600;
+}
+
+%body-regular {
+	font-family: $font-sans;
+	font-weight: 500;
+}
+
+%body-semi {
+	font-family: $font-sans;
+	font-weight: 600;
+}
+
+%body-semi-italic {
+	font-family: $font-sans;
+	font-weight: 600;
+	font-style: italic;
+}
+
+%body-italic {
+	font-family: $font-sans;
+	font-weight: 500;
+	font-style: italic;
+}
+
+
+
+
+ /* $. Heading sizes
+\*----------------------------------------------------------------*/
+
+
+h1, .xxl, .title-xxl {
+	font-size:72px;
+	line-height: 72px;
+	color:$colour-vibrant-green;
+	font-family: nunito_sans_bold;
+}
+h1.sub-page, .xxl.sub-page, .title-xxl.sub-page {
+    color:#fff;
+}
+
+
+h2, .xl, .title-xl, .article-h2 {
+    font-family: nunito_sans_bold;
+    font-size: 28px;
+    line-height: 32px;
+    color: $colour-charcoal;
+}
+
+h3, .l, .title-l, .article-h3 {
+	font-family: nunito_sans_regular;
+	font-size:21px;
+	line-height: 28px;
+	color:$colour-vibrant-green;
+
+    &.black {
+        color:#000;
+    }
+}
+
+h4, .m, .title-m, .article-h4 {
+	font-family: nunito_sans_semibold;
+	font-size:16px;
+	line-height: 21px;
+	color:$colour-charcoal;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+h5, .s, .title-s {
+	font-family: nunito_sans_extrabold;
+	font-size:16px;
+	line-height: 21px;
+	color:$colour-charcoal;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+h6, .xs, .title-xs {
+
+}
+
+.button {
+	font-family: nunito_sans_bold;
+	font-size:14px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+
+ /* $. Body sizes
+\*----------------------------------------------------------------*/
+
+p {
+	font-size: 16px;
+	line-height: 21px;
+	color:$colour-grey;
+}
+
+
+
+
+
+ /* $. Text modifiers
+\*----------------------------------------------------------------*/
+
+.emphasis {
+	//color:$color-tertiary;
+}
+
+.sub-title {
+	//color:$color-ui-dark-grey-2;
+	padding-top:$padding--m;
+	padding-bottom:$padding--l;
+	@include breakpoint($mob) {  
+		padding-bottom:0;
+	}
+}

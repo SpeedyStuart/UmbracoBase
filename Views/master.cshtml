@@ -1,0 +1,64 @@
+﻿@using Umbraco.Core.PropertyEditors
+@inherits UmbracoViewPage
+@{
+    Layout = null;
+    // Get basic design settings from the homepage
+    var home = (HomePage)Model.Root();
+    var privacy = Model.Root().DescendantsOfType("genericPage").Where(a => a.Name.Contains("Privacy")).Select(c => c as GenericPage).FirstOrDefault();
+    var contactModel = new EA.Web.Models.ContactModel(Model);
+    var developments = Model.Root().DescendantsOfType("propertyPage").Select(x => x as PropertyPage);
+    var contactPage = Model.Root().DescendantsOfType("contactPage").FirstOrDefault();
+    contactModel.RedirectTo = Model.Url;
+    contactModel.ContactUrl = contactPage?.Url ?? "/";
+    contactModel.Developments = developments.Select(x => new KeyValuePair<int, string>(x.Id, x.PropertyName)).ToList();
+    contactModel.FormIntroduction = home.ContactFormIntroduction;
+    contactModel.PrivacyPolicyUrl = privacy?.Url ?? "";
+}
+
+<!doctype html>
+<html class="no-js" lang="en-gb">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    @*<script async src="https://www.googletagmanager.com/gtag/js?id=UA-159090079-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-159090079-1');
+    </script>*@
+
+    <meta charset="utf-8">
+    <title>@Model.Name - Umbraco Base</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://www.XXXXX.com@(Model.Url)" />
+
+    @RenderSection("Header", required: false)
+</head>
+
+<body>
+    <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+    <header class="@Model.ContentType.Alias">
+        @Html.Partial("~/Views/Partials/Navigation/TopNavigation.cshtml")
+    </header>
+
+    <main class="@Model.ContentType.Alias">
+        @RenderBody()
+    </main>
+
+    <footer class="row">
+    
+    </footer>
+    
+
+    <script src="/scripts/main.js"></script>
+    
+</body>
+
+</html>

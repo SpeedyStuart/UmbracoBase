@@ -1,0 +1,17 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.ContactPage>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "master.cshtml";
+}
+
+<article>
+	@if (Model.ContentArea != null)
+	{
+		foreach (var item in Model.ContentArea)
+		{
+			<div class="container-fluid">
+				@Html.Partial($"~/Views/Elements/{item.ContentType.Alias}.cshtml", item)
+			</div>
+		}
+	}
+</article>

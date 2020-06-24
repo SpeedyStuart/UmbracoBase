@@ -1,0 +1,16 @@
+.img-with-text {
+
+    h3 {
+        font-size:20px;
+        margin-top:3rem;
+        text-transform: none;
+    }
+    p {
+
+        max-width:700px;
+    }
+    .has-background-img {
+        background-size: cover;
+        background-position: center center;
+    }
+}

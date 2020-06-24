@@ -1,0 +1,403 @@
+.enquiry-form {
+    position: absolute;
+    top: 0;
+    //bootstrap override
+    margin-right: -15px;
+    right: 0;
+    background: $white;
+    height: auto;
+    width: 800px;
+    max-width: 800px;
+    display: none;
+    border-left: 1px solid $colour-pale-grey;
+    border-bottom: 1px solid $colour-pale-grey;
+    margin-bottom: 2rem;
+    padding-left: 150px !important;
+    padding-right: 150px !important;
+    box-shadow: -4px 4px 10px 0px #717175;
+
+
+    @include breakpoint($mob) {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        max-width: 105%;
+    }
+
+    padding-top: 4rem;
+
+    form {
+        border-bottom: 1px solid $colour-pale-grey;
+        margin: 0 auto 3rem auto;
+    }
+
+
+    .enquiry-form-footer {
+        text-align: center;
+    }
+
+    .enquiry-img {
+        max-width: 60px;
+        margin-bottom: 3rem;
+        float: left;
+    }
+
+    .socials {
+        text-align: center;
+
+        a img {
+            display: inline;
+        }
+
+        img {
+            max-width: 25px;
+        }
+    }
+
+    form {
+        max-width: 500px;
+    }
+
+    .close-enquiry-form {
+        float: right;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        img {
+            max-width: 60px;
+        }
+    }
+
+    h2 {
+        font-size: 40px;
+        color: $green;
+    }
+
+    input {
+        margin: 2rem;
+        margin-left: auto;
+        border: 0;
+        border-bottom: 1px solid $colour-mid-grey;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    input[type=submit] {
+        margin: 3rem;
+        border: 0;
+        min-width: 100px;
+    }
+
+    input[type=checkbox] {
+        margin: 1rem;
+        width: 10px;
+    }
+
+    select option {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 16px;
+
+        p {
+            max-width: 400px;
+        }
+    }
+
+    .select-css {
+        display: block;
+        font-size: 16px;
+        line-height: 1.3;
+        padding: .6em 1.4em .5em .8em;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        border: 1px solid #aaa;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: #fff;
+        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+        background-repeat: no-repeat, repeat;
+        background-position: right .7em top 50%, 0 0;
+        background-size: .65em auto, 100%;
+        border: 0;
+        border-bottom: 1px solid $colour-mid-grey;
+    }
+
+    .select-css::-ms-expand {
+        display: none;
+    }
+
+    .select-css:hover {
+        border-color: #888;
+    }
+
+    .select-css:focus {
+        border-color: #aaa;
+        box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+        box-shadow: 0 0 0 3px -moz-mac-focusring;
+        color: #222;
+        outline: none;
+    }
+
+    .select-css option {
+        font-weight: normal;
+    }
+
+
+    .round {
+        position: relative;
+    }
+
+    .round .inner-checkbox {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 20px;
+        left: 5px;
+        position: absolute;
+        top: 7px;
+        width: 20px;
+    }
+
+    .round .inner-checkbox:after {
+        border: 2px solid #fff;
+        border-top: none;
+        border-right: none;
+        content: "";
+        height: 6px;
+        left: 3px;
+        opacity: 0;
+        position: absolute;
+        top: 4px;
+        transform: rotate(-45deg);
+        width: 12px;
+    }
+
+    .round input[type="checkbox"] {
+        visibility: hidden;
+    }
+
+    .round input[type="checkbox"]:checked + .inner-checkbox {
+        background-color: $green;
+        border-color: $green;
+    }
+
+    .round input[type="checkbox"]:checked + .inner-checkbox:after {
+        opacity: 1;
+    }
+
+    .round.error {
+        border:1px solid red;
+    }
+}
+
+
+.enquiry-form-property {
+    position: relative;
+    margin-right: -15px;
+    background: $white;
+    //z-index: 10;
+    height: 100%;
+
+    @include breakpoint($mob) {
+        max-width: 105%;
+    }
+
+
+    a {
+        color:$green;
+        text-decoration:underline;
+    }
+
+    padding-top: 4rem;
+
+    form {
+        
+        margin-bottom: 3rem;
+    }
+
+
+    .enquiry-form-footer {
+        text-align: center;
+    }
+
+    .enquiry-img {
+        max-width: 60px;
+        margin-bottom: 3rem;
+        float: left;
+    }
+
+    .socials {
+        text-align: center;
+
+        a img {
+            display: inline;
+        }
+
+        img {
+            max-width: 25px;
+        }
+    }
+    .close-enquiry-form {
+        float: right;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        img {
+            max-width: 60px;
+        }
+    }
+
+    input {
+        margin: 2rem;
+        margin-left: auto;
+        border: 0;
+        border-bottom: 1px solid $colour-mid-grey;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    input[type=submit] {
+        border: 0;
+        min-width: 100px;
+    }
+
+    input[type=checkbox] {
+        margin: 1rem;
+        width: 20px;
+    }
+
+    select option {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 16px;
+
+        p {
+            max-width: 400px;
+        }
+    }
+
+    .select-css {
+        display: block;
+        font-size: 16px;
+        line-height: 1.3;
+        padding: .6em 1.4em .5em .8em;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        border: 1px solid #aaa;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: #fff;
+        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+        background-repeat: no-repeat, repeat;
+        background-position: right .7em top 50%, 0 0;
+        background-size: .65em auto, 100%;
+        border: 0;
+        border-bottom: 1px solid $colour-mid-grey;
+    }
+
+    .select-css::-ms-expand {
+        display: none;
+    }
+
+    .select-css:hover {
+        border-color: #888;
+    }
+
+    .select-css:focus {
+        border-color: #aaa;
+        box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+        box-shadow: 0 0 0 3px -moz-mac-focusring;
+        color: #222;
+        outline: none;
+    }
+
+    .select-css option {
+        font-weight: normal;
+    }
+
+
+    .round {
+        position: relative;
+    }
+
+    .round .inner-checkbox {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 20px;
+        left: 0;
+        position: absolute;
+        top: 4px;
+        width: 20px;
+    }
+
+    .round .inner-checkbox:after {
+        border: 2px solid #fff;
+        border-top: none;
+        border-right: none;
+        content: "";
+        height: 6px;
+        left: 3px;
+        opacity: 0;
+        position: absolute;
+        top: 4px;
+        transform: rotate(-45deg);
+        width: 12px;
+    }
+
+    .round input[type="checkbox"] {
+        visibility: hidden;
+    }
+
+    .round input[type="checkbox"]:checked + .inner-checkbox {
+        background-color: $green;
+        border-color: $green;
+    }
+
+    .round input[type="checkbox"]:checked + .inner-checkbox:after {
+        opacity: 1;
+    }
+}
+
+.form-submitted {
+    min-height: 100px;
+    padding: 3rem 1rem;
+    margin-bottom: 3rem !important;
+    margin-top: 3rem;
+    background: $colour-ghost-grey;
+
+    @include breakpoint($desk) {
+        max-width: 1500px;
+
+    }
+
+    h3 {
+        color: $green !important;
+        margin-bottom:2rem;
+    }
+
+    p {
+        font-size: 20px;
+        max-width: 400px;
+        margin: auto;
+
+        @include breakpoint($mob) {
+            font-size:inherit;
+        }
+    }
+}

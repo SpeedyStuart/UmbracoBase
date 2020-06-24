@@ -1,0 +1,128 @@
+.open-mobile-menu {
+    //showing mobile meny on all
+    //display:none !important;
+    @include breakpoint($mob) {
+        //display: inline-block !important;
+    }
+
+    @include breakpoint($tab) {
+        //display: inline-block !important;
+    }
+
+    @include breakpoint($lap) {
+        //showing mobile meny on all
+        //display: none !important;
+    }
+}
+.close-mobile-menu {
+    float: right;
+    max-width: 35px;
+    position: relative;
+
+
+
+    @include breakpoint($mob) {
+        top: 25px;
+        right: -29px;
+    }
+
+    right: -17px;
+    top: 17px;
+    //padding:1rem;
+    //margin-top: 2rem;
+}
+
+
+.constructionUpdatePage nav .icon {
+    background-color: $green;
+    padding-top: 1rem;
+
+
+    @include breakpoint($mob) {
+        padding-bottom: 2rem;
+    }
+}
+
+
+.mobile-menu {
+    position: fixed;
+    right: 0;
+    display: none;
+    background: $green;
+    width: 100%;
+    //TODO see why 100% is not enough!
+    max-width: 700px;
+    height: 100%;
+    opacity: 1;
+    //position: absolute;
+    .mobile-menu-container {
+        position: relative;
+        background: $green;
+        height: 100%;
+    }
+
+    .ea-logo-mob {
+        max-width: 150px;
+        // padding: 1rem;
+        padding-top: 0.5rem;
+        padding-left: 0;
+        //left:-20px;
+        position: relative;
+        //padding-left: 2rem;
+        //float:left;
+    }
+
+    ul {
+        padding-top: 3rem;
+        //min-height:200px;
+        padding-bottom: 6rem;
+        padding-left: 28px;
+        //min-height:60%;
+        @include breakpoint($mob) {
+            padding-top: inherit;
+            padding-bottom: inherit;
+        }
+
+        @media (max-height:375px) {
+            padding-top: 1rem;
+        }
+    }
+
+    ul li {
+        font-size: 23px;
+        list-style-type: none;
+        padding-bottom: 1rem;
+        line-height: 6rem;
+
+        @include breakpoint($mob) {
+            line-height: normal;
+        }
+
+        a {
+            color: $colour-navy;
+        }
+
+        @media (max-height:375px) {
+            line-height: 2rem;
+        }
+    }
+
+    .mobile-menu-footer {
+        border-top: 1px solid $colour-grey;
+        background: $green;
+        width: 100%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 14px;
+        position: absolute;
+        bottom: 0;
+        /*@include breakpoint($mob) {
+            position: relative;
+        }*/
+        img {
+            max-width: 30px;
+            display: inline;
+            padding-bottom: 1rem;
+        }
+    }
+}

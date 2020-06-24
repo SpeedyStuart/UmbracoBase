@@ -1,0 +1,101 @@
+.floating-logo {
+    background-image: url('../assets_src/logo/EA_Icon_Green_RGB.svg');
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    right: -157px;
+    bottom: -150px;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+
+    @include breakpoint($tab) {
+        display: none;
+    }
+
+    @include breakpoint($mob) {
+        display: none;
+    }
+
+    @include breakpoint($lap) {
+        display: block;
+        height: 350px;
+        width: 350px;
+        right: -187px;
+        bottom: -164px;
+    }
+
+    @include breakpoint($desk) {
+        display: block;
+        height: 400px;
+        width: 400px;
+        right: -209px;
+        bottom: -185px;
+        opacity: 0.6;
+    }
+
+    @include breakpoint($desk-w) {
+        display: block;
+        height: 600px;
+        width: 600px;
+        right: -319px;
+        bottom: -282px;
+        opacity: 0.6;
+    }
+}
+
+.floating-logo-mobile {
+
+
+    background-image: url('../assets_src/logo/EA_Icon_Green_RGB.svg');
+    position: absolute;
+    //border:1px solid red;
+    left: -109px;
+    top: -154px;
+    width: 310px;
+    height: 300px;
+
+    opacity:0.6;
+
+    @include breakpoint($mob) {
+        display: block;
+    } 
+    @include breakpoint($tab) {
+        display: block;
+    }
+    @include breakpoint($lap) {
+        display: none;
+    }
+
+}
+
+.floating-logo-sub-page {
+    background-image: url('../assets_src/logo/EA_Icon_Green_RGB.svg');
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    right: 0;
+    bottom: -187px;
+    opacity: 0.6;
+
+    @include breakpoint($tab) {
+        height: 200px;
+        width: 200px;
+        bottom: -93px;
+        right: 0;
+    }
+
+    @include breakpoint($mob) {
+        height: 150px;
+        width: 150px;
+        bottom: -75px;
+    }
+
+    @include breakpoint($lap) {
+        display: block;
+        height: 400px;
+        width: 400px;
+        bottom: -209px;
+        right: 0px;
+    }
+}
+

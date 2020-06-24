@@ -1,0 +1,116 @@
+.properties, .property {
+
+    padding-top:3rem;
+
+
+
+    .reverse-order-desk {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+
+        @include breakpoint($mob) {
+            flex-direction: row;
+            display: block;
+        }
+    }
+
+    .property-buttons {
+        position: relative;
+
+        .button-container {
+            bottom: 0;
+            position: absolute;
+
+            @include breakpoint($mob) {
+                position: relative;
+            }
+
+
+            .button {
+                margin: 1rem;
+            }
+        }
+    }
+
+    .normal-order-desk {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+        @include breakpoint($mob) {
+            flex-direction: row;
+            display: block;
+        }
+    }
+
+
+    .property-image {
+        min-height: 300px;
+    }
+
+    font-size: 14px;
+
+    .property-details {
+        padding: 2rem;
+
+        p a {
+            color: $green;
+        }
+    }
+
+    .location {
+        margin-bottom: 0;
+    }
+
+    h3.price {
+        font-size: 21px;
+        margin-bottom: 2rem;
+    }
+
+    p.price {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+
+    img {
+        max-width: 25px;
+        text-align: left;
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+
+    div {
+        margin-bottom: 1rem;
+    }
+
+    h3.name {
+        margin-bottom: 0;
+    }
+
+    h3 {
+        font-size: 30px;
+        color: $black;
+        font-weight: 600;
+    }
+
+    h4 {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+
+    ul {
+        padding-left: 17px;
+    }
+}
+
+
+//property override
+
+.property div {
+    margin-bottom:0;
+}
+
+

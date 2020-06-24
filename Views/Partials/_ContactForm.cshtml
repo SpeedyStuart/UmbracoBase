@@ -1,0 +1,71 @@
+﻿@model EA.Web.Models.ContactModel
+
+@if (Model.Submitted)
+{
+    <h2>Thank you</h2>
+    <p>
+        Thank you for your interest, one
+        of the team will be in touch shortly to help you with your enquiry
+    </p>
+}
+else
+{
+
+    <div class="form-submitted">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3>Thank you for your interest</h3> 
+                <p>One of the team will be in touch shortly to help you with your enquiry</p>
+            </div>
+        </div>
+    </div>
+
+    <form action="@Model.ContactUrl" method="post" class="contact-form">
+        @Html.HiddenFor(m => m.RedirectTo)
+        @Html.HiddenFor(m => m.ContactUrl)
+        <input type="hidden" name="AJ" value="0" />
+
+        @Model.FormIntroduction
+
+        @Html.TextBoxFor(m => m.FirstName, new { placeholder = "First name", @class = "field", required = "required" })<br />
+        @Html.TextBoxFor(m => m.LastName, new { placeholder = "Last name", @class = "field", required = "required" })<br />
+        @Html.TextBoxFor(m => m.Email, new { placeholder = "Email address", @class = "field", required = "required" })<br />
+        @Html.TextBoxFor(m => m.Phone, new { placeholder = "Mobile number", @class = "field", required = "required" })<br />
+
+        @if (Model.Developments != null && Model.Developments.Any())
+        {
+            <select class="select-css" name="DevelopmentOfInterest">
+                <option>Choose property of interest</option>
+                @foreach (var development in Model.Developments)
+                {
+                    <option value="@development.Value" @(Model.DevelopmentOfInterest == development.Value ? "checked=checked" : "")>@development.Value</option>
+                }
+            </select><br />
+        }
+        else
+        {
+            @Html.HiddenFor(m=>m.DevelopmentOfInterest)
+        }
+
+        @Html.TextBoxFor(m => m.Message, new { placeholder = "Insert a message (optional)", @class = "field" })<br />
+
+        @*<div class="round">
+            <label for="@(Html.ViewData.TemplateInfo.HtmlFieldPrefix)_Subscribe">
+                <input type="checkbox" id="@(Html.ViewData.TemplateInfo.HtmlFieldPrefix)_Subscribe" name="@(Html.ViewData.TemplateInfo.HtmlFieldPrefix).Subscribe" checked="@Model.Subscribe" />
+                <span class="inner-checkbox"></span>
+                Get up-to-date information on our future developments.
+            </label>
+        </div>*@
+
+        <div class="round privacy-wrapper">
+            <label for="@(Html.ViewData.TemplateInfo.HtmlFieldPrefix)_Privacy">
+                <input type="checkbox" id="@(Html.ViewData.TemplateInfo.HtmlFieldPrefix)_Privacy" name="@(Html.ViewData.TemplateInfo.HtmlFieldPrefix).Privacy" />
+                <span class="inner-checkbox"></span>
+                I have read and accept the <a href="@Model.PrivacyPolicyUrl">Privacy Policy</a>
+            </label>
+        </div>
+
+        <input class="button" type="submit" value="Send">
+
+    </form>
+}

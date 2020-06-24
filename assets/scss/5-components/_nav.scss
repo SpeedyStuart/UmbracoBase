@@ -1,0 +1,88 @@
+
+
+
+nav {
+    //float:right;
+    @include breakpoint($mob) {
+        padding-right: 1rem;
+    }
+
+    padding-right: 2rem;
+
+    a {
+        color: $colour-vibrant-green;
+        font-family: 'nunito_sans_regular';
+        font-size: 21px;
+        position: relative;
+        line-height: 28px;
+        text-transform: uppercase;
+        //text-shadow: 0px 1px 1px $colour-navy;
+        &:hover {
+            color: $white;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        float: right;
+        width: 100%;
+        text-align: right;
+
+    }
+
+    ul li {
+        //display: inline;
+        padding: 2rem;
+        text-align: right;
+
+        //hiding rest of menu for now....
+        display:none;
+
+        @include breakpoint($lap) {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        @include breakpoint($desk) {
+            padding: 2rem;
+        }
+
+        @include breakpoint($mob) {
+            display: none;
+        }
+
+        @include breakpoint($tab) {
+            display: none;
+        }
+
+        @include breakpoint($lap) {
+            //display: inline-block;
+        }
+    }
+
+    .icon {
+        display: inline;
+        padding: 0.5rem;
+
+        @include breakpoint($mob) {
+            padding-right: 0;
+        }
+
+        img {
+            max-width: 35px;
+
+            @include breakpoint($mob) {
+                max-width: 35px;
+                padding-top: 0.5rem;
+                padding: 0;
+                top: 4px;
+            }
+
+            display: inline;
+            position: relative;
+            top: -4px;
+            //top: 25px;
+            //right: -14px;
+        }
+    }
+}

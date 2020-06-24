@@ -1,0 +1,56 @@
+.button {
+    margin-top: 2rem;
+    max-width: 215px;
+    min-width: 130px;
+    text-align: center;
+    color: $black;
+    padding: 0.6rem 1.2rem;
+    background-color: $colour-vibrant-green;
+    display: inline-block;
+    border-radius: 15px;
+    -webkit-transition: background 1s ease; /* Safari prior 6.1 */
+    transition: background 0.5s ease;
+
+    &.black {
+        background: $black;
+        color: $green;
+    }
+
+    &.white {
+        background: transparent;
+        color: $green;
+        border:1px solid $green;
+    }
+
+    &:hover {
+        //color:$colour-navy;
+        background: $colour-ghost-grey;
+        color: $colour-navy;
+        //border: 1px solid $colour-vibrant-green;
+        text-decoration: none;
+    }
+
+    &.clear {
+        background: white;
+        border: 1px solid $colour-vibrant-green;
+
+        &:hover {
+            //color:$colour-navy;
+            background: $colour-ghost-grey;
+            color: $colour-navy;
+            //border: 1px solid $colour-vibrant-green;
+            text-decoration: none;
+        }
+    }
+
+    &.dark {
+        background: $colour-navy;
+        color: $colour-vibrant-green;
+        border: 1px solid $colour-vibrant-green;
+
+        &:hover {
+            background: white;
+            border: 1px solid $colour-vibrant-green;
+        }
+    }
+}

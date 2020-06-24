@@ -1,0 +1,41 @@
+/**
+ * Title:
+ *    Mixins
+ * Sections:
+ *    $. Rem font sizes
+ *    $. Create before/after
+ */
+
+
+
+/* $. Rem font sizes - https://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+\*----------------------------------------------------------------*/
+
+@mixin font-size($sizeValue: 1.6) {
+    font-size: ($sizeValue * 10) + px;
+    font-size: $sizeValue + rem;
+}
+
+
+
+/* $. Create before/after element
+\*----------------------------------------------------------------*/
+
+@mixin beforafter($position) {
+	content: '';
+	position: $position;
+	display: inline-block;
+	top: 0;
+	left: 0;
+}
+
+.row.no-gutters {
+	margin-right: 0;
+	margin-left: 0;
+  
+	& > [class^="col-"],
+	& > [class*=" col-"] {
+	  padding-right: 0;
+	  padding-left: 0;
+	}
+  }

@@ -1,0 +1,183 @@
+.timeline {
+    position: relative;
+
+
+    @include breakpoint($mob) {
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: -17px;
+            border-left: 2px solid #d4d4d4;
+        }
+
+        .timeline-item.hide-mobile {
+            display: none;
+        }
+    }
+
+
+    .date.hide-desktop {
+        display: none;
+    }
+
+    @include breakpoint($mob) {
+        .date.hide-desktop {
+            display: block;
+            position: absolute;
+            top: 10px;
+            padding: 0.5rem 1rem;
+            left: -20px;
+        }
+    }
+
+    //adds spacing via padding to 3rd item in timeline
+    //this is always the date as it's reversed on desktop
+    .timeline-item:nth-child(3n+0) {
+        @include breakpoint($mob) {
+            padding-bottom: 0;
+        }
+
+        @include breakpoint($tab) {
+            padding-bottom: 400px;
+        }
+        @include breakpoint($lap-m) {
+            padding-bottom: 500px;
+        }
+        @include breakpoint($lap-l) {
+            padding-bottom: 500px;
+        }
+        @include breakpoint($desk-w) {
+            padding-bottom: 700px;
+        }
+    }
+
+    .line:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        border-left: 2px solid #d4d4d4;
+        transform: translate(-50%);
+    }
+
+    @include breakpoint($mob) {
+        .line:after {
+            border-left: 0;
+        }
+    }
+
+    img {
+        padding: 1rem;
+        // max-width: 500px;
+    }
+
+
+
+    .reverse-order-desk .timeline-item:nth-child(1) {
+        // border-left: 1px solid red;
+        border-right: 0;
+        padding-left: 1px;
+    }
+
+
+
+    .icon {
+        max-width: 35px;
+        display: inline-block;
+        position: absolute;
+        // left: 50%;
+        padding: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    @include breakpoint($mob) {
+
+        .icon {
+            position: relative;
+            left: -17px;
+            transform: translate(-50%);
+        }
+    }
+
+    h3 {
+        margin-top: 1rem;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 27px;
+        padding-top: 2rem;
+
+        @include breakpoint($mob) {
+            text-align: left;
+            background: #fff;
+            position: relative;
+            left: -29px;
+        }
+    }
+
+    h1, h2, h3, p {
+        color: $black;
+    }
+
+    p {
+        border-bottom: 1px solid #d4d4d4;
+        padding-bottom: 1rem;
+    }
+
+    .date {
+        background: $green;
+        max-width: 200px;
+        margin: 0 3rem;
+        text-align: center;
+        padding:10px;
+    }
+}
+
+
+
+.intro-text.timeline-intro {
+    background: #fff;
+
+
+
+    h3 {
+        text-transform: uppercase;
+        font-size: 20px;
+        letter-spacing: 0.05em;
+        color: $black;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 80px;
+        color: $black;
+
+        @include breakpoint($mob) {
+            font-size: 60px;
+        }
+
+        letter-spacing: 0.05em;
+    }
+
+    p {
+        color: $black;
+        border-bottom: 0;
+    }
+
+    .button {
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+}
+
+
+ 

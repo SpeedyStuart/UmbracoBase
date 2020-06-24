@@ -1,0 +1,263 @@
+
+//helper
+/*
+* {
+    border: 1px solid #f00 !important;
+  }
+ */
+
+
+.has-pt-3 {
+    padding-top:3rem;
+}
+
+.flex-order {
+    margin-bottom: 3rem;
+
+    @include breakpoint($mob) {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint($tab) {
+        margin-bottom: 0;
+    }
+}
+
+@include breakpoint($mob) {
+    .flex-order {
+        display: flex;
+        flex-direction: column;
+
+        .intro-text {
+            order: 2;
+        }
+
+        .main-carousel {
+            order: 1;
+        }
+    }
+}
+
+@include breakpoint($tab) {
+    .flex-order {
+        display: flex;
+        flex-direction: column;
+
+        .intro-text {
+            order: 2;
+        }
+
+        .main-carousel {
+            order: 1;
+        }
+    }
+}
+
+@include breakpoint($lap) {
+    .flex-order {
+        display: flex;
+        flex-direction: column;
+
+        .intro-text {
+            order: 1;
+        }
+
+        .main-carousel {
+            order: 2;
+        }
+    }
+}
+
+
+.container-xl-only {
+    max-width:2300px;
+    margin:auto;
+}
+
+.absolute-center {
+    display:flex; 
+    justify-content:center; 
+    align-items:center;
+}
+.absolute-top {
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+}
+
+.sub-page-header {
+    //for sub pages
+    min-height: 400px;
+    max-height: 400px;
+}
+
+.pos-abs-100 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.h-100p {
+    height:100%;
+}
+
+.cookie-bar {
+    position: fixed;
+    bottom: 0;
+    background: $colour-pale-grey;
+    padding: 2rem;
+
+    .button {
+        margin-top: auto;
+        margin-right: 1rem;
+        //float: right;
+    }
+}
+
+.intro-text {
+    font-size:18px;
+}
+
+.reverse-order-desk {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+
+    @include breakpoint($mob) {
+        flex-direction: row;
+        display: block;
+    }
+}
+.reverse-order-mob {
+    flex-direction: row;
+    display: block;
+
+    @include breakpoint($mob) {
+        display: flex;
+        flex-direction: row-reverse;
+        //width: 100%;
+        
+    }
+}
+//boostrap causing overflow fix
+.row {
+
+/*
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    @include breakpoint($mob) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    }
+    @include breakpoint($tab) {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+*/
+}
+
+
+
+.square:before{
+    content: "";
+    display: block;
+    //padding-top: 100%;  /* initial ratio of 1:1*/
+    padding-top: 75%; 
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+.has-divider {
+    border-bottom: 1px dotted $colour-mid-grey;
+}
+
+
+.has-padding-x-4 {
+    padding:0 4rem !important;
+
+    @include breakpoint($mob) {
+        padding:1rem !important;
+    }
+}
+.has-padding-4 {
+    padding:4rem !important;
+    @include breakpoint($mob) {
+        padding:3rem !important;
+    }
+}
+
+
+.has-bg-navy {
+    background: $colour-navy;
+    p {
+        color:$white;
+    }
+
+}
+
+.has-bg-light-grey {
+    background: $colour-ghost-grey;
+}
+.has-bg-light-white {
+    background: $white;
+}
+iframe {
+    width:100%;
+    //min-height:300px;
+}
+
+.chat {
+
+    display:none;
+
+    img {
+        max-width:80px;
+        //padding:1rem;
+        position: fixed;
+        bottom: 24px;
+        right: 54px;
+        margin:3rem;
+
+        @include breakpoint($mob) {
+            right: -12px;
+        }
+    }
+}
+
+.display-block {
+    display:block !important;
+}
+
+.hide-on-mobile {
+    @include breakpoint($mob) {
+        display: none;
+    }
+}
+
+.hide-on-tablet {
+    @include breakpoint($mob) {
+        display: none;
+    }
+    @include breakpoint($tab) {
+        display: none;
+    }
+    @include breakpoint($lap) {
+        display: inline-block;
+    }
+}
+
+.hide-on-laptop {
+    @include breakpoint($mob) {
+        display: inline-block;
+    }
+
+    @include breakpoint($lap) {
+        display: none;
+    }
+
+}

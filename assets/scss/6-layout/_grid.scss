@@ -1,0 +1,152 @@
+// /**
+//  * Title:
+//  *    Grid classes
+//  * Sections:
+//  *    $. Modifiers
+//  */
+
+
+
+
+/* $. Modifiers
+\*----------------------------------------------------------------*/
+
+@include breakpoint($mob) {
+	.col--mob-4  {
+		lost-column: 1/3 0 $gutter-s;
+	}
+	.col--mob-6  {
+		lost-column: 1/2 0 $gutter-s;
+	}
+	.col--mob-9  {
+		lost-column: 3/4 0 $gutter-s;
+	}
+	.col--mob-12  {
+		width: 100%;
+	}
+}
+
+@include breakpoint($tab $lap) {
+	.col--tab-2 {
+		lost-column: 1/6 0 $gutter-s;
+	}
+	.col--tab-4  {
+		lost-column: 1/3 0 $gutter-s;
+	}
+	.col--tab-3  {
+		lost-column: 1/4 0 $gutter-s;
+	}
+	.col--tab-6  {
+		lost-column: 1/2 0 $gutter-s;
+	}
+	.col--tab-8  {
+		lost-column: 8/12 0 $gutter-s;
+	}
+	.col--tab-10  {
+		lost-column: 5/6 0 $gutter-s;
+	}
+}
+
+@include breakpoint($lap $desk) {
+	.col--lap-2 {
+		lost-column: 1/6 0 $gutter-l;
+	}
+	.col--lap-4  {
+		lost-column: 1/3 0 $gutter-l;
+	}
+	.col--lap-3  {
+		lost-column: 1/4 0 $gutter-l;
+	}
+	.col--lap-8  {
+		lost-column: 2/3 0 $gutter-l;
+	}
+	.col--lap-5  {
+		lost-column: 5/12 0 $gutter-l;
+	}
+	.col--lap-6 {
+		lost-column: 1/2 0 $gutter-l;
+	}
+	.col--lap-7  {
+		lost-column: 7/12 0 $gutter-l;
+	}
+	.col--lap-8  {
+		lost-column: 8/12 0 $gutter-l;
+	}
+	.col--lap-9  {
+		lost-column: 9/12 0 $gutter-l;
+	}
+	.col--lap-10  {
+		lost-column: 10/12 0 $gutter-l;
+	}
+}
+
+@include breakpoint($desk) {
+	.col--desk-2 {
+		lost-column: 1/6 0 $gutter-l;
+	}
+	.col--desk-4  {
+		lost-column: 1/3 0 $gutter-l;
+	}
+	.col--desk-3  {
+		lost-column: 1/4 0 $gutter-l;
+	}
+	.col--desk-8  {
+		lost-column: 2/3 0 $gutter-l;
+	}
+	.col--desk-5  {
+		lost-column: 5/12 0 $gutter-l;
+	}
+	.col--desk-6 {
+		lost-column: 1/2 0 $gutter-l;
+	}
+	.col--desk-7  {
+		lost-column: 7/12 0 $gutter-l;
+	}
+	.col--desk-8  {
+		lost-column: 8/12 0 $gutter-l;
+	}
+	.col--desk-9  {
+		lost-column: 9/12 0 $gutter-l;
+	}
+	.col--desk-10  {
+		lost-column: 10/12 0 $gutter-l;
+	}
+}
+
+
+  // Offsets
+@include breakpoint($tab $lap) {
+	.offset--tab-2 {
+		lost-offset: -1/6;
+	}
+}
+@include breakpoint($lap $desk) {
+	.offset--lap-1 {
+		lost-offset: -1/12;
+	}
+	.offset--lap-2 {
+		lost-offset: -1/6;
+	}
+}
+
+@include breakpoint($desk) {
+	.offset--desk-1 {
+		lost-offset: -1/12;
+	}
+
+	.offset--desk-2 {
+		lost-offset: -2/12;
+	}
+}
+
+.clear {
+	lost-utility: clearfix;
+}
+
+.clear-both {
+	clear: both;
+}
+
+.col--last {
+	margin-right: 0 !important;
+}

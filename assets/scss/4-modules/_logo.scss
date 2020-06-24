@@ -1,0 +1,91 @@
+.sub-page {
+    .ea-logo {
+        position: relative;
+        padding-top: 0;
+
+        @include breakpoint($mob) {
+            //  max-width:200px;
+            left: 0;
+        }
+
+        @include breakpoint($mob) {
+            // top: -19px;
+        }
+
+        @include breakpoint($tab) {
+            //  top: -30px;
+            left: 16px
+        }
+
+        @include breakpoint($lap) {
+            //  top: -27px;
+            //  left: 3rem;
+            left: 16px
+        }
+    }
+}
+
+@include breakpoint($mob) {
+    .sub-page {
+        .main-carousel {
+
+            .ea-logo {
+                position: absolute;
+            }
+        }
+    }
+}
+ @include breakpoint($tab) {
+    .sub-page {
+        .main-carousel {
+
+            .ea-logo {
+                position: absolute;
+            }
+        }
+    }
+}
+
+
+
+.ea-logo {
+    max-width: 150px;
+    //padding-left:3rem;
+    //padding-top: 1rem;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    //used for mobile view
+    &.hide-on-laptop {
+    }
+
+    @include breakpoint($mob) {
+        position: absolute;
+        //top: -20px;
+        //max-width: 150px;
+        //padding-left: 1rem;
+        padding-top: 0;
+        left: 13px;
+        top: -4px;
+    }
+
+    left: 16px;
+
+    @include breakpoint($mob) {
+        position: absolute;
+        //top: 1rem;
+        //left: 16px;
+    }
+
+    @include breakpoint($tab) {
+        position: absolute;
+        //top: 1rem;
+        //left: 16px;
+    }
+
+    @include breakpoint($lap) {
+        position: relative;
+        //top: 1rem;
+        //left: 18px;
+    }
+    //position: relative;
+}

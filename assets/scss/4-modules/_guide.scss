@@ -1,0 +1,213 @@
+//guide header
+
+.guidePage {
+
+    .carousel-inner img {
+
+        @include breakpoint($mob) {
+            min-height: 250px;
+        }
+    }
+
+    .carousel-caption {
+        top: 40%;
+
+        h2 {
+            color: $white;
+            font-size: 60px;
+
+            @include breakpoint($mob) {
+                font-size: 30px;
+            }
+        }
+
+        h3 {
+            color: $white;
+            text-transform: uppercase;
+            font-size: 2rem;
+
+            @include breakpoint($mob) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+
+.guides {
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    margin: auto !important;
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    padding-right: 5px;
+
+    @include breakpoint($mob) {
+        max-width: 100%;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    @include breakpoint($tab) {
+        max-width: 100%;
+        margin-top: 3rem;
+        padding-top: 3rem;
+        padding-top: 0;
+    }
+
+    @include breakpoint($lap) {
+        //max-width: 80%;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    a:hover, a {
+        color: $green;
+        height: 100%;
+    }
+
+    .guide-container {
+        padding: 0 !important;
+        margin-top: 3rem;
+        overflow: hidden;
+
+        @include breakpoint($mob) {
+            margin-top: 0;
+        }
+
+        .guide {
+
+            h3 {
+                @include breakpoint($tab) {
+                    font-size: 20px;
+                }
+            }
+
+            span {
+                @include breakpoint($tab) {
+                    font-size: 14px;
+                    display: block;
+                    padding: 0 10px 5px;
+                }
+            }
+
+            &:nth-child(odd) {
+                div {
+                    padding-left: 10px;
+                }
+            }
+
+            &:nth-child(even) {
+                div {
+                    margin-left: -5px;
+                    max-width:95%;
+                }
+            }
+        }
+    }
+}
+.guide {
+    margin-bottom: 1rem;
+    position: relative;
+    background-size: cover;
+    text-align: center;
+    padding: 0.5rem !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    margin-bottom: 1rem !important;
+    position: relative;
+
+    a.square:before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-color: #000;
+        opacity: 0.3;
+        padding-top: 64.5%;
+    }
+
+    &:nth-child(2) {
+        //margin-bottom: 1rem !important;
+    }
+
+    &:nth-child(1) {
+        //margin-bottom: 1rem !important;
+    }
+
+    @include breakpoint($mob) {
+        padding: 0.5rem 0.5rem !important;
+        margin: 0 !important;
+    }
+
+    a div {
+        position: absolute;
+        z-index: 10;
+    }
+
+    .vertical-text {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    span {
+        color: $white;
+        //color:$black;
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-family: nunito_sans_regular;
+
+        @include breakpoint($mob) {
+            font-size: 11px;
+        }
+
+        @include breakpoint($lap-l) {
+            font-size: 14px;
+        }
+
+        @include breakpoint($desk-xw) {
+            font-size: 20px;
+        }
+    }
+
+    h3 {
+        color: $white;
+        font-size: 33px;
+        font-weight: bold;
+
+        @include breakpoint($mob) {
+            font-size: 20px;
+        }
+
+        @include breakpoint($tab) {
+            font-size: 26px;
+        }
+
+        @include breakpoint($lap) {
+            font-size: 25px;
+        }
+
+        @include breakpoint($desk-xw) {
+            font-size: 40px;
+        }
+    }
+
+
+    p {
+        color: $white;
+        font-size: 18px;
+        text-shadow: -1px 1px 2px $colour-grey;
+
+        @include breakpoint($desk-xw) {
+            font-size: 22px;
+        }
+    }
+
+    .square:before {
+    }
+}

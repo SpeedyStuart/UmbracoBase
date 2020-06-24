@@ -1,0 +1,33 @@
+.feature {
+    min-height: 377px;
+
+    .feature-image {
+        background-size: cover;
+        background-position: top center;
+        min-height:300px
+    }
+
+
+    h2 {
+        color:$green;
+        font-size: 25px;
+        padding-bottom: 1rem;
+        margin-top:6rem;
+    }
+
+    .feature-text {
+        //background-color: $colour-navy;
+        padding:5rem;
+        
+
+        
+        
+
+        @include breakpoint($tab) {
+            //override inline style
+           // background-image: none !important;
+        }
+    }
+}
+
+

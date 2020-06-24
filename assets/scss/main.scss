@@ -1,0 +1,99 @@
+﻿/**
+ * Title:
+ *    Main Stylesheet
+ * Description:
+ *    This is the main Scss file which will import all partials and
+ *    compile into: assets/css/styles.css
+ * Sections:
+ *    $. Config
+ *    $. Base
+ *    $. Modules
+ *    $. Components
+ *    $. Vendors
+ *    $. Layout
+ *    $. Helpers
+ */
+
+
+
+/* $. Config - Variables, global mixins & Bower components
+\*----------------------------------------------------------------*/
+
+@charset "UTF-8";
+@import "2-config/vars";
+@import "2-config/mixins";
+@import "2-config/fonts";
+@import "2-config/z-index";
+
+// Required high up due to how soon it's used.
+@import "8-vendors/breakpoint.scss";
+
+
+/* $. Base - Project defaults & Element styling
+\*----------------------------------------------------------------*/
+
+@import "1-base/default";
+@import "1-base/elements";
+@import "1-base/typography";
+
+
+/* $. Modules - Global objects i.e. .buttons, .boxes, forms etc
+\*----------------------------------------------------------------*/
+
+//@import "4-modules/icon-arrow";
+@import "4-modules/carousel";
+@import "4-modules/guide";
+@import "4-modules/list-of-items";
+@import "4-modules/feature";
+@import "4-modules/quote";
+@import "4-modules/enquiry-form";
+@import "4-modules/floating-logo";
+@import "4-modules/logo";
+@import "4-modules/hp-intro-text";
+@import "4-modules/text-intro";
+@import "4-modules/img-with-text";
+@import "4-modules/properties";
+@import "4-modules/socials";
+@import "4-modules/timeline";
+
+
+/* $. Components - More substanial pieces of UI,  i.e. .breadcrumb, .feedback block, etc
+\*----------------------------------------------------------------*/
+
+@import "5-components/nav";
+@import "5-components/button";
+@import "5-components/arrows";
+@import "5-components/mobile-menu";
+@import "5-components/video";
+
+/* $. Layout - Page based layouts i.e. .header, .footer, grid etc
+\*----------------------------------------------------------------*/
+
+@import "6-layout/container";
+@import "6-layout/header";
+@import "6-layout/footer";
+@import "6-layout/grid";
+@import "6-layout/site-wide";
+
+
+/* $. Pages - Page unique layouts, so anything specific to one page, and one page only. etc
+\*----------------------------------------------------------------*/
+
+@import "7-pages/article";
+@import "7-pages/homepage";
+
+
+/* $. Vendors - Plugins, libraries etc
+\*----------------------------------------------------------------*/
+
+@import "8-vendors/bootstrap.scss";
+
+
+/* $. Helpers - i.e. Clearfixes, accessbility hidden, etc
+\*----------------------------------------------------------------*/
+
+//@import "3-helpers/extras";
+//@import "3-helpers/print";
+
+
+//@import "input";

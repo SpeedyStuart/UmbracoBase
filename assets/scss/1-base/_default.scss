@@ -1,0 +1,83 @@
+/**
+ * Title:
+ *    Defaults
+ * Description:
+ *    These are the base styles for the project
+ * Sections:
+ *    $. Defaults
+ *    $. Breakpoint indicator
+ */
+
+
+
+/* $. Defaults
+\*----------------------------------------------------------------*/
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    line-height: 1.5;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $font-sans;
+    font-size: $base-font-size !important;
+    //color: $color-primary;
+    line-height: 1.4;
+    overflow-y: scroll;
+    min-height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow-x: hidden;
+    margin:0;
+    padding: 0;
+    //max-width: 2000px;
+    //margin:auto !important;
+}
+/*
+main {
+    max-width: 2000px;
+    margin:auto !important;
+}*/
+
+/* $. Current breakpoint indicator (HIDE FOR PRODUCTION)
+\*----------------------------------------------------------------*/
+
+html {
+    // &:before {
+    //     content:'M';
+    //     color:#ececec;
+    //     position:fixed;
+    //     height:25px;
+    //     z-index:999;
+    //     width:25px;
+    //     padding:4px 0;
+    //     text-align:center;
+    //     font-weight:600;
+    //     background-color:rgba(0,0,0,0.8);
+    // }
+    // @include breakpoint($tab) {
+    //     &:before {
+    //         content:'T';
+    //     }
+    // }
+    // @include breakpoint($lap) {
+    //     &:before {
+    //         content:'L';
+    //     }
+    // }
+    // @include breakpoint($desk) {
+    //     &:before {
+    //         content:'D';
+    //     }
+    // }
+}

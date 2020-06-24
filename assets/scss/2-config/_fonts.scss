@@ -1,0 +1,45 @@
+/**
+ * Title:
+ *    Fonts
+ * Description:
+ *    Font kit rules
+ * Sections:
+ *    $. Font face
+ */
+
+
+
+ /* $. Font face
+\*----------------------------------------------------------------*/
+
+// This new font set has better x-height which is more in the middle.
+
+
+
+@font-face {
+    font-family: nunito_sans_bold;
+    src: url('../assets_src/fonts/NunitoSans-Bold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: nunito_sans_regular;
+    src: url('../assets_src/fonts/NunitoSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: nunito_sans_semibold;
+    src: url('../assets_src/fonts/NunitoSans-SemiBold.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: nunito_sans_extrabold;
+    src: url('../assets_src/fonts/NunitoSans-ExtraBold.ttf');
+    font-weight: 900;
+    font-style: normal;
+}

@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@using Umbraco.Web;
+@{
+    var site = Model.Root();
+    var selection = site.Children.Where(x => x.IsVisible());
+}
+
+<nav>
+    <ul>
+        @foreach (var item in selection)
+        {
+        <li><a class="@(item.IsAncestorOrSelf(Model) ? " active" : null)" href="@item.Url">@item.Name</a></li>
+        }
+    </ul>
+</nav>

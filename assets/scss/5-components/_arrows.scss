@@ -1,0 +1,54 @@
+.arrow-right {
+    position: relative;
+
+    &:after {
+        //top: 50%; // half way down (vertical center).
+        // margin-top: -12px; // adjust position, arrow has a height of 30px.
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -7px;
+        right: -12px;
+        border: solid 6px transparent;
+        border-left-color: $green;
+        z-index: 1;
+    }
+}
+
+.arrow-left {
+    position: relative;
+
+    /*&:before {
+        content: "";
+        background: url("/assets_src/icons/Arrow-Left_GR.svg") no-repeat 0 0;
+        height: 15px;
+        width: 20px; // width of arrow image? 
+        display: block;
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        margin: 0 auto;
+        right: 0; // to center the arrow 
+    }*/
+
+
+        &:before {
+      
+        //top: 50%; // half way down (vertical center).
+       // margin-top: -12px; // adjust position, arrow has a height of 30px.
+      
+
+
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -7px;
+        left: -12px;
+        border: solid 6px transparent;
+        border-right-color: $green;
+        z-index: 1;
+    }
+
+
+
+}

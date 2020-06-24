@@ -1,0 +1,114 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.HomePage>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    Layout = "master.cshtml";
+    var guides = Model.Root().DescendantsOfType("guidePage").Select(c => c as GuidePage).Where(g=>g.ShowOnHomePage).ToList();
+    var firstGuide = guides.FirstOrDefault();
+}
+
+
+<div class="flex-order">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-lg-4 col-xs-12  no-gutters intro-text" id="intro-text">
+                <div class="floating-logo-mobile"></div>
+                <div>
+                    <a href="/"><img class="ea-logo hide-on-tablet" src="/assets_src/logo/EA_Logo_Green_RGB.svg" alt="Emerging Advisory logo" /></a>
+                    <h1>@Model.WelcomeHeading</h1>
+                    @Model.WelcomeParagraph
+
+                    <a href="@(Model.ButtonDestination?.Url)" class="button">@Model.ButtonLabel</a>
+                </div>
+                <div class="floating-logo"></div>
+            </div>
+
+
+            <div class=" col-lg-8 col-xs-12 no-gutters main-carousel">
+                <a href="/"><img class="ea-logo hide-on-laptop" src="/assets_src/logo/EA_Logo_Green_RGB.svg" alt="Emerging Advisory logo" /></a>
+                <!--d-flex flex-row-->
+                <div id="transition-timer-carousel" class="carousel slide transition-timer-carousel carousel-fade" data-ride="carousel">
+
+                    <ol class="carousel-indicators">
+                        @{
+                            var slide = 0;
+                            foreach (var s in Model.Carousel)
+                            {
+                                <li data-target="#transition-timer-carousel" data-slide-to="@slide" class="@(slide==0 ? "active" : "")"></li>
+                                slide++;
+                            }
+                        }
+                    </ol>
+                    <div class="carousel-inner">
+                        @{
+                            var slideItem = 0;
+                            foreach (var s in Model.Carousel)
+                            {
+                                <div class="carousel-item item @(slideItem == 0 ? "active" : "")">
+                                    <img class="d-block w-100" src="@Url.GetCropUrl(s.Image.Url, width:1400)" alt="@s.Line2">
+                                    <div class="carousel-caption">
+                                        <h3>@s.Line1</h3>
+                                        <h2>@s.Line2</h2>
+                                        <p>@s.Line3</p>
+                                        <a href="@(s.ButtonDestination?.Url)" class="button">@(string.IsNullOrEmpty(s.ButtonLabelOverride) ? "Details" : s.ButtonLabelOverride)</a>
+                                    </div>
+                                </div>
+
+                                slideItem++;
+                            }
+                        }
+                    </div>
+                    <hr class="transition-timer-carousel-progress-bar animate" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row  guides">
+
+    <div class="col-sm-12 col-lg-7">
+        <div class="hp-video">
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/@Model.Video" allow="autoplay; fullscreen" width="638" height="359" frameborder="0" allowfullscreen></iframe>
+        </div>       
+        @*<div class="hp-video-caption">
+            <h3>Video of the month</h3>
+        </div>*@
+    </div>
+
+    @if (guides.Any())
+    {
+ 
+        <div class="col-sm-12 col-lg-5 guide-container">
+            <div class="row ">
+                @foreach (var guide in guides.Take(4))
+                {
+                    <div class="col-6 guide">
+                        <a href="@guide.Url" class=" square  absolute-center" style="background-image:url('@Url.GetCropUrl(guide.ImageOverride ?? guide.MainImage, width: 400)');	background-size: cover;">
+                            <div>
+                                <span>@(!string.IsNullOrWhiteSpace(guide.TopLabelOverride) ? guide.TopLabelOverride : "Our guide to")</span>
+                                <h3>@guide.Name</h3>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+
+    }
+</div>
+
+<div class="container-xl-only">
+    @if (Model.ContentArea != null)
+    {
+        ViewData["Odd"] = true;
+        foreach (var item in Model.ContentArea)
+        {
+            <div>
+                @Html.Partial($"~/Views/Elements/{item.ContentType.Alias}.cshtml", item, ViewData)
+            </div>
+
+            ViewData["Odd"] = !(bool)ViewData["Odd"];
+        }
+    }
+</div>

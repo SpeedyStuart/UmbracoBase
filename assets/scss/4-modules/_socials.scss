@@ -1,0 +1,17 @@
+.socials {
+    padding-top: 3rem;
+    text-align: center;
+
+    @include breakpoint($mob) {
+        //display: none;
+        padding-top: 1rem;
+    }
+}
+
+.socials img {
+    max-width: 25px;
+    //text-align: left;
+    vertical-align: middle;
+    display: inline-block;
+    margin:auto;
+}

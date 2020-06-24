@@ -1,0 +1,53 @@
+
+footer {
+    font-size: 14px;
+    margin-top: 3rem;
+    border-top: 1px dotted $colour-mid-grey;
+    background: $colour-ghost-grey;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+
+
+    @include breakpoint($mob) {
+        font-size: 12px;
+        padding-bottom: 8rem;
+    }
+    //bootstrap fix
+    &.row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+
+
+    .socials {
+        img {
+            float: left;
+            max-width: 30px;
+        }
+    }
+
+    span {
+        color: $colour-vibrant-green;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    a, a:hover {
+        color: $colour-navy;
+    }
+
+    @include breakpoint($mob) {
+        div {
+            //margin-left:2rem;
+            //margin-bottom:2rem;
+        }
+
+        ul {
+            padding-left: 0;
+            margin-left: 2rem;
+        }
+    }
+}

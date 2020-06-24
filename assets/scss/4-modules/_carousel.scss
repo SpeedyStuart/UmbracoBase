@@ -1,0 +1,273 @@
+
+//full height for carousl images
+.main-carousel {
+    max-height: 600px;
+
+    @include breakpoint($lap) {
+        max-height: 747px;
+    }
+
+    .carousel {
+        height: 100%;
+    }
+
+    .carousel-inner {
+        height: 100%;
+    }
+
+    .carousel-item {
+        height: 100%;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(60%);
+            max-height: 600px;
+            min-height: 600px;
+
+            @include breakpoint($lap) {
+                min-height: 747px;
+                max-height: 747px;
+            }
+
+            @include breakpoint($tab) {
+                min-height: 747px;
+                max-height: 747px;
+            }
+
+            @include breakpoint($mob) {
+                min-height: 500px;
+                max-height: 500px;
+            }
+        }
+    }
+}
+.sub-page {
+    .main-carousel {
+        max-height: 500px;
+
+        @include breakpoint($desk-xw) {
+            max-height: 700px;
+        }
+    }
+}
+
+
+.main-carousel {
+
+    //for mob floating logo
+    position: relative;
+
+    padding:0 !important;
+    
+}
+@include breakpoint($mob) {
+    .carousel-item img {
+        //height:100%;
+    }
+}
+
+
+//bootstrap overrides
+.main-carousel, .small-carousel {
+    .carousel-indicators {
+
+        li {
+            width: 10px !important;
+            height: 10px !important;
+            border-radius: 50%;
+            background-color: $colour-vibrant-green !important;
+            opacity: 1 !important;
+
+            &.active {
+                background-color: $white !important;
+            }
+        }
+    }
+}
+
+
+.main-carousel .transition-timer-carousel .carousel-caption {
+    @include breakpoint($mob) {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+
+//boostrap override
+.main-carousel {
+    .transition-timer-carousel .carousel-caption {
+        background: transparent !important;
+
+        @include breakpoint($mob) {
+            //top: 150px !important;
+        }
+
+        @include breakpoint($tab) {
+            //top: 200px !important;
+        }
+
+        @include breakpoint($lap) {
+           // top: 250px !important;
+        }
+
+        top:40%;
+
+        text-align: center !important;
+        margin: auto !important;
+
+        h3 {
+            text-transform: uppercase;
+            font-size: 20px;
+            color: $white;
+            letter-spacing: 0.05em;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            font-size: 80px;
+            line-height: 1;
+
+            @include breakpoint($mob) {
+                font-size: 60px;
+            }
+
+            color: $white;
+            letter-spacing: 0.05em;
+        }
+
+        p {
+            color: $white;
+            margin-bottom: 4rem;
+        }
+
+        .button {
+            margin: auto;
+        }
+    }
+}
+.main-carousel {
+    .transition-timer-carousel .carousel-caption {
+        background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 4%, rgba(0,0,0,0.5) 32%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(4%,rgba(0,0,0,0.1)), color-stop(32%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+	    width: 100%;
+	    left: 0px;
+	    right: 0px;
+	    bottom: 0px;
+	    text-align: left;
+	    padding-top: 5px;
+	    padding-left: 15%;
+	    padding-right: 15%;
+    }
+    .transition-timer-carousel .carousel-caption .carousel-caption-header {
+	    margin-top: 10px;
+	    font-size: 24px;
+    }
+
+    @media (min-width: 970px) {
+        /* Lower the font size of the carousel caption header so that our caption
+        doesn't take up the full image/slide on smaller screens */
+	    .transition-timer-carousel .carousel-caption .carousel-caption-header {
+		    font-size: 36px;
+	    }
+    }
+    .transition-timer-carousel .carousel-indicators {
+	    bottom: 0px;
+	    margin-bottom: 5px;
+    }
+
+    .transition-timer-carousel .transition-timer-carousel-progress-bar {
+        height: 5px;
+        background-color: $colour-vibrant-green;
+        width: 0%;
+        margin: -5px 0px 0px 0px;
+        border: none;
+
+        position: relative;
+    }
+    .transition-timer-carousel .transition-timer-carousel-progress-bar.animate{
+        /* We make the transition time shorter to avoid the slide transitioning
+        before the timer bar is "full" - change the 4.25s here to fit your
+        carousel's transition time */
+        -webkit-transition: width 4.25s linear;
+	    -moz-transition: width 4.25s linear;
+	    -o-transition: width 4.25s linear;
+	    transition: width 4.25s linear;
+    }
+}
+
+//multi carousel
+
+.multi-carousel .carousel-inner {
+    min-height: inherit;
+}
+
+.multi.carousel img {
+    max-height:360px;
+}
+
+.carousel.multi.slide {
+    position: relative;
+    margin:auto;
+    margin-bottom:3rem;
+
+    .col-lg-4 {
+        padding: 0;
+    }
+}
+
+.carousel.multi.slide, .small-carousel {
+    .icon-prev img {
+        max-width: 20px;
+        padding: 0;
+    }
+
+    img {
+        max-height: 261px;
+        height: 100%;
+
+
+
+        @include breakpoint($desk-xw) {
+            max-height: 500px;
+        }
+    }
+
+
+
+
+
+
+    .icon-next img {
+        max-width: 20px;
+        padding: 0;
+    }
+
+    .left.carousel-control {
+        position: absolute;
+        left: -22px;
+        top: 50%;
+
+        @include breakpoint($mob) {
+            left: -15px;
+        }
+    }
+
+    .right.carousel-control {
+        position: absolute;
+        right: -22px;
+        top: 50%;
+
+        @include breakpoint($mob) {
+            right: -15px;
+        }
+    }
+}
+
+

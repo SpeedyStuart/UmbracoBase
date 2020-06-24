@@ -1,0 +1,207 @@
+/**
+ * Title:
+ *    Elements
+ * Description:
+ *    The styling of basic element tags
+ * Sections:
+ *    $. Basics
+ *    $. Headings
+ *    $. Links
+ *    $. Blockquotes
+ *    $. Embedded
+ */
+
+
+
+/* $. Basics
+\*----------------------------------------------------------------*/
+
+hr {
+    border: 0;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+ins {
+    text-decoration: none;
+}
+
+mark {
+    font-style: italic;
+    font-weight: bold;
+}
+
+pre {
+    overflow-x: auto;
+}
+
+address {
+    white-space: pre-line;
+}
+
+strong {
+    font-weight: 600;
+}
+
+p {
+    margin: 0 0 $padding--m;
+    font-family: 'nunito_sans_regular';
+}
+
+blockquote {
+    padding: 0;
+    margin: 0;
+    clear: both;
+    border: none;
+}
+
+img {
+    border: 0;
+}
+
+svg {
+    
+}
+
+figure {
+    margin:0;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+}
+
+body, main, timeline-intro {
+    position: relative;
+}
+
+/* $. Headings
+\*----------------------------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 600;
+    margin: 0;
+}
+
+
+/* $. Links
+\*----------------------------------------------------------------*/
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: $colour-vibrant-green;
+    text-decoration: underline;
+    transition: color $transition-duration $transition-cubic-bezier;
+
+    &:hover,
+    &:focus {
+        color: $colour-navy;
+        outline: none;
+    }
+    /*breaking long urls on mobile*/
+    /*@include breakpoint($mob) {
+        word-break: break-word;
+    }*/
+     
+     word-break: break-word;
+
+ 
+}
+
+
+/*Word break: break word not supported by ie or edge*/
+
+
+
+     /*edge support*/
+     @supports (-ms-ime-align: auto) {    
+        
+        .box--contact__details a {
+            word-break:break-all;
+            display:inline-block;
+        }
+        /*word-wrap:break-word;*/
+
+    }
+    /*ie support*/
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        .box--contact__details {
+            word-break:break-all;
+            display:inline-block;
+        }
+        /*word-wrap:break-word;*/
+    }
+
+// main {
+//     ul li a,
+//     p a {
+//         &:visited {
+//             color: $color-quaternary !important;
+
+//             &:hover {
+//                 color: $color-secondary !important;
+//             }
+//         }
+//     }
+// }
+
+main {
+    ul li a,
+    p a {
+        color: $colour-grey;
+    }
+}
+
+button {
+    border-radius: 0;
+    cursor: pointer;
+    background: none;
+    box-shadow: none;
+    border:none;
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}
+
+
+
+/* $. Blockquotes
+\*----------------------------------------------------------------*/
+
+
+
+
+/* $. Embedded
+\*----------------------------------------------------------------*/
+
+img {
+    display: block;
+    height: auto;
+    border: 0;
+    width: 100%;
+}
+
+img,
+audio,
+canvas,
+embed,
+object,
+video {
+    max-width: 100%;
+}
+
+iframe {
+    display: block;
+}
